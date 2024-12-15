@@ -14,7 +14,11 @@ document.getElementById('greenBtn').addEventListener("click", function () {
 
 let body = document.querySelector('body');
 
+<<<<<<< HEAD
 document.getElementById('changeBtn'), addEventListener("click", () => {
+=======
+document.getElementById('changeBtn').addEventListener("click", () => {
+>>>>>>> 87e8e71d00530359e60d9076edacf9ed667244fb
     fetch('/api/color')
         .then(response => response.json())
         .then(data => {
@@ -24,4 +28,35 @@ document.getElementById('changeBtn'), addEventListener("click", () => {
         .catch(error => {
             console.error('Error fetching color:', error)
         })
+<<<<<<< HEAD
 })
+=======
+})
+
+// ============================================================================================
+const textContainer = document.querySelector('.textContainer');
+
+const careers = ["Java Developer", "React Developer", "Web Developer"];
+let careerIndex = 0;
+
+let characterIndex = 0;
+
+updateText();
+
+function updateText() {
+    characterIndex++;
+    textContainer.innerHTML = `<h1>I'm a ${careers[careerIndex].slice(0, characterIndex)}</h1>`
+
+    if (characterIndex === careers[careerIndex].length) {
+        careerIndex++;
+        characterIndex = 0;
+    }
+
+    if (careerIndex === careers.length) {
+        careerIndex = 0;
+    }
+    setTimeout(updateText, 400)
+}
+
+// ==========================================================================================================
+>>>>>>> 87e8e71d00530359e60d9076edacf9ed667244fb
