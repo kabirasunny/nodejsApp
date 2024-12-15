@@ -14,11 +14,7 @@ document.getElementById('greenBtn').addEventListener("click", function () {
 
 let body = document.querySelector('body');
 
-<<<<<<< HEAD
-document.getElementById('changeBtn'), addEventListener("click", () => {
-=======
 document.getElementById('changeBtn').addEventListener("click", () => {
->>>>>>> 87e8e71d00530359e60d9076edacf9ed667244fb
     fetch('/api/color')
         .then(response => response.json())
         .then(data => {
@@ -28,9 +24,6 @@ document.getElementById('changeBtn').addEventListener("click", () => {
         .catch(error => {
             console.error('Error fetching color:', error)
         })
-<<<<<<< HEAD
-})
-=======
 })
 
 // ============================================================================================
@@ -59,4 +52,3 @@ function updateText() {
 }
 
 // ==========================================================================================================
->>>>>>> 87e8e71d00530359e60d9076edacf9ed667244fb
